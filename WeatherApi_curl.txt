@@ -1,0 +1,109 @@
+Tworzenie danych:
+curl -X 'POST' \
+  'https://localhost:7036/api/Application/Seed' \
+  -H 'accept: */*' \
+  -d ''
+
+Login: (Admin, Adm1n3k!):
+curl -X 'GET' \
+  'https://localhost:7036/api/Application/Login?username=Admin&password=Adm1n3k%21' \
+  -H 'accept: */*'
+
+
+Kontroler krajów:
+Pobierz listę krajów:
+curl -X 'GET' \
+  'https://localhost:7036/Country/GetAllData' \
+  -H 'accept: */*' \
+  -H 'Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJodHRwOi8vc2NoZW1hcy5taWNyb3NvZnQuY29tL3dzLzIwMDgvMDYvaWRlbnRpdHkvY2xhaW1zL3JvbGUiOiJBZG1pbiIsImV4cCI6MTcyNTk3NjYxOCwiaXNzIjoiV2VhdGhlckFwcCIsImF1ZCI6IlVzZXJzIn0.tMur_xsrNrK5JKjtVltaohAyeo9bnD7M7-q8GlJvSyc'
+
+Pobierz kraj o Id 1:
+curl -X 'GET' \
+  'https://localhost:7036/Country/GetDataById/1' \
+  -H 'accept: */*' \
+  -H 'Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJodHRwOi8vc2NoZW1hcy5taWNyb3NvZnQuY29tL3dzLzIwMDgvMDYvaWRlbnRpdHkvY2xhaW1zL3JvbGUiOiJBZG1pbiIsImV4cCI6MTcyNTk3NjYxOCwiaXNzIjoiV2VhdGhlckFwcCIsImF1ZCI6IlVzZXJzIn0.tMur_xsrNrK5JKjtVltaohAyeo9bnD7M7-q8GlJvSyc'
+
+Dodaj kraj o nazwie Niemcy:
+curl -X 'POST' \
+  'https://localhost:7036/Country/AddData?countryName=Niemcy' \
+  -H 'accept: */*' \
+  -H 'Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJodHRwOi8vc2NoZW1hcy5taWNyb3NvZnQuY29tL3dzLzIwMDgvMDYvaWRlbnRpdHkvY2xhaW1zL3JvbGUiOiJBZG1pbiIsImV4cCI6MTcyNTk3NjYxOCwiaXNzIjoiV2VhdGhlckFwcCIsImF1ZCI6IlVzZXJzIn0.tMur_xsrNrK5JKjtVltaohAyeo9bnD7M7-q8GlJvSyc' \
+  -d ''
+
+Zmień nazwę kraju o Id = 2 na Szkocja
+curl -X 'PUT' \
+  'https://localhost:7036/Country/UpdateData?countryId=2&countryName=Szkocja' \
+  -H 'accept: */*' \
+  -H 'Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJodHRwOi8vc2NoZW1hcy5taWNyb3NvZnQuY29tL3dzLzIwMDgvMDYvaWRlbnRpdHkvY2xhaW1zL3JvbGUiOiJBZG1pbiIsImV4cCI6MTcyNTk3NjYxOCwiaXNzIjoiV2VhdGhlckFwcCIsImF1ZCI6IlVzZXJzIn0.tMur_xsrNrK5JKjtVltaohAyeo9bnD7M7-q8GlJvSyc'
+
+Skasuj kraj o Id 2:
+curl -X 'DELETE' \
+  'https://localhost:7036/Country/DeleteData/2' \
+  -H 'accept: */*' \
+  -H 'Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJodHRwOi8vc2NoZW1hcy5taWNyb3NvZnQuY29tL3dzLzIwMDgvMDYvaWRlbnRpdHkvY2xhaW1zL3JvbGUiOiJBZG1pbiIsImV4cCI6MTcyNTk3NjYxOCwiaXNzIjoiV2VhdGhlckFwcCIsImF1ZCI6IlVzZXJzIn0.tMur_xsrNrK5JKjtVltaohAyeo9bnD7M7-q8GlJvSyc'
+
+
+Kontroler regionów:
+Pobierz listę regionów:
+curl -X 'GET' \
+  'https://localhost:7036/Region/GetAllData' \
+  -H 'accept: */*' \
+  -H 'Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJodHRwOi8vc2NoZW1hcy5taWNyb3NvZnQuY29tL3dzLzIwMDgvMDYvaWRlbnRpdHkvY2xhaW1zL3JvbGUiOiJBZG1pbiIsImV4cCI6MTcyNTk3NjYxOCwiaXNzIjoiV2VhdGhlckFwcCIsImF1ZCI6IlVzZXJzIn0.tMur_xsrNrK5JKjtVltaohAyeo9bnD7M7-q8GlJvSyc'
+
+Pobierz region o Id 1:
+curl -X 'GET' \
+  'https://localhost:7036/Region/GetDataById/1' \
+  -H 'accept: */*' \
+  -H 'Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJodHRwOi8vc2NoZW1hcy5taWNyb3NvZnQuY29tL3dzLzIwMDgvMDYvaWRlbnRpdHkvY2xhaW1zL3JvbGUiOiJBZG1pbiIsImV4cCI6MTcyNTk3NjYxOCwiaXNzIjoiV2VhdGhlckFwcCIsImF1ZCI6IlVzZXJzIn0.tMur_xsrNrK5JKjtVltaohAyeo9bnD7M7-q8GlJvSyc'
+
+Dodaj region "Lubuskie" do kraju o Id 1:
+curl -X 'POST' \
+  'https://localhost:7036/Region/AddData?regionName=Lubuskie&countryId=1' \
+  -H 'accept: */*' \
+  -H 'Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJodHRwOi8vc2NoZW1hcy5taWNyb3NvZnQuY29tL3dzLzIwMDgvMDYvaWRlbnRpdHkvY2xhaW1zL3JvbGUiOiJBZG1pbiIsImV4cCI6MTcyNTk3NjYxOCwiaXNzIjoiV2VhdGhlckFwcCIsImF1ZCI6IlVzZXJzIn0.tMur_xsrNrK5JKjtVltaohAyeo9bnD7M7-q8GlJvSyc' \
+  -d ''
+
+Zmień nazwę regionu o Id 3 na "Pomorskie"
+curl -X 'PUT' \
+  'https://localhost:7036/Region/UpdateData?resgionId=3&regionName=Pomorskie&countryId=1' \
+  -H 'accept: */*' \
+  -H 'Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJodHRwOi8vc2NoZW1hcy5taWNyb3NvZnQuY29tL3dzLzIwMDgvMDYvaWRlbnRpdHkvY2xhaW1zL3JvbGUiOiJBZG1pbiIsImV4cCI6MTcyNTk3NjYxOCwiaXNzIjoiV2VhdGhlckFwcCIsImF1ZCI6IlVzZXJzIn0.tMur_xsrNrK5JKjtVltaohAyeo9bnD7M7-q8GlJvSyc'
+
+Usuń region o Id 3:
+curl -X 'DELETE' \
+  'https://localhost:7036/Region/DeleteData/3' \
+  -H 'accept: */*' \
+  -H 'Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJodHRwOi8vc2NoZW1hcy5taWNyb3NvZnQuY29tL3dzLzIwMDgvMDYvaWRlbnRpdHkvY2xhaW1zL3JvbGUiOiJBZG1pbiIsImV4cCI6MTcyNTk3NjYxOCwiaXNzIjoiV2VhdGhlckFwcCIsImF1ZCI6IlVzZXJzIn0.tMur_xsrNrK5JKjtVltaohAyeo9bnD7M7-q8GlJvSyc'
+
+
+Kontroler Pogody:
+Pobierz listę danych:
+curl -X 'GET' \
+  'https://localhost:7036/Weather/GetAllData' \
+  -H 'accept: */*' \
+  -H 'Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJodHRwOi8vc2NoZW1hcy5taWNyb3NvZnQuY29tL3dzLzIwMDgvMDYvaWRlbnRpdHkvY2xhaW1zL3JvbGUiOiJBZG1pbiIsImV4cCI6MTcyNTk3NjYxOCwiaXNzIjoiV2VhdGhlckFwcCIsImF1ZCI6IlVzZXJzIn0.tMur_xsrNrK5JKjtVltaohAyeo9bnD7M7-q8GlJvSyc'
+
+Pobierz dane o Id 1:
+curl -X 'GET' \
+  'https://localhost:7036/Weather/GetDataById/1' \
+  -H 'accept: */*' \
+  -H 'Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJodHRwOi8vc2NoZW1hcy5taWNyb3NvZnQuY29tL3dzLzIwMDgvMDYvaWRlbnRpdHkvY2xhaW1zL3JvbGUiOiJBZG1pbiIsImV4cCI6MTcyNTk3NjYxOCwiaXNzIjoiV2VhdGhlckFwcCIsImF1ZCI6IlVzZXJzIn0.tMur_xsrNrK5JKjtVltaohAyeo9bnD7M7-q8GlJvSyc'
+
+Dodaj dane o temperaturze 40 w regionie Id 2:
+curl -X 'POST' \
+  'https://localhost:7036/Weather/AddData?temperature=40&regionId=2' \
+  -H 'accept: */*' \
+  -H 'Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJodHRwOi8vc2NoZW1hcy5taWNyb3NvZnQuY29tL3dzLzIwMDgvMDYvaWRlbnRpdHkvY2xhaW1zL3JvbGUiOiJBZG1pbiIsImV4cCI6MTcyNTk3NjYxOCwiaXNzIjoiV2VhdGhlckFwcCIsImF1ZCI6IlVzZXJzIn0.tMur_xsrNrK5JKjtVltaohAyeo9bnD7M7-q8GlJvSyc' \
+  -d ''
+
+Zmień temperaturę na -20 w regionie 2:
+curl -X 'PUT' \
+  'https://localhost:7036/Weather/UpdateData?weatherId=2&temperature=-20&regionId=2' \
+  -H 'accept: */*' \
+  -H 'Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJodHRwOi8vc2NoZW1hcy5taWNyb3NvZnQuY29tL3dzLzIwMDgvMDYvaWRlbnRpdHkvY2xhaW1zL3JvbGUiOiJBZG1pbiIsImV4cCI6MTcyNTk3NjYxOCwiaXNzIjoiV2VhdGhlckFwcCIsImF1ZCI6IlVzZXJzIn0.tMur_xsrNrK5JKjtVltaohAyeo9bnD7M7-q8GlJvSyc'
+
+Skasuj dane o Id 2:
+curl -X 'DELETE' \
+  'https://localhost:7036/Weather/DeleteData/2' \
+  -H 'accept: */*' \
+  -H 'Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJodHRwOi8vc2NoZW1hcy5taWNyb3NvZnQuY29tL3dzLzIwMDgvMDYvaWRlbnRpdHkvY2xhaW1zL3JvbGUiOiJBZG1pbiIsImV4cCI6MTcyNTk3NjYxOCwiaXNzIjoiV2VhdGhlckFwcCIsImF1ZCI6IlVzZXJzIn0.tMur_xsrNrK5JKjtVltaohAyeo9bnD7M7-q8GlJvSyc'

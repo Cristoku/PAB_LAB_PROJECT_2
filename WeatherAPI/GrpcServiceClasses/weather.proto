@@ -1,0 +1,17 @@
+syntax = "proto3";
+
+option csharp_namespace = "WeatherApi";
+
+package greet;
+
+service WeatherNaming {
+  rpc DescribeWeather (WeatherRequest) returns (WeatherReply);
+}
+
+message WeatherRequest {
+  int32 temperature = 1;
+}
+
+message WeatherReply {
+  string message = 1;
+}

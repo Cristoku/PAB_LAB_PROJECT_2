@@ -1,0 +1,15 @@
+syntax = "proto3";
+
+option csharp_namespace = "GrpcService";
+
+service WeatherDescriptor {
+	rpc GetDescriptor(WeatherDescriptorMessage) returns (WeatherDescriptorResponse);
+}
+
+message WeatherDescriptorMessage {
+	int32 temperature = 1;
+}
+
+message WeatherDescriptorResponse {
+	string description = 1;
+}
